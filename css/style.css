@@ -1357,3 +1357,56 @@ body.dark-theme .logo-img {
   filter: brightness(0) invert(1); /* Deixa a logo legível se for branca ou ajusta se necessário */
 }
 
+/* Missão, Visão e Valores */
+.mvm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.mvm-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: 30px;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.mvm-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+
+.mvm-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.mvm-logo {
+  height: 35px;
+  width: auto;
+  border-radius: 4px;
+}
+
+.mvm-title {
+  font-family: var(--font-title);
+  color: var(--color-primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.mvm-text {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+body.dark-theme .mvm-card {
+  border-color: var(--color-border);
+}
+
+
