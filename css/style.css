@@ -1415,5 +1415,11 @@ body.dark-theme .mvm-card {
   }
 }
 
+.video-sound-btn:hover {
+  background-color: var(--color-highlight) !important;
+  transform: scale(1.1);
+}
+
+
 
 

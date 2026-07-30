@@ -119,7 +119,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, observerOptions);
 
-  animateElements.forEach(el => {
-    observer.observe(el);
-  });
+  // About Video Sound Toggle
+  const aboutVideo = document.getElementById('about-video');
+  const soundToggleBtn = document.getElementById('video-sound-toggle');
+  
+  if (aboutVideo && soundToggleBtn) {
+    soundToggleBtn.addEventListener('click', () => {
+      if (aboutVideo.muted) {
+        aboutVideo.muted = false;
+        soundToggleBtn.querySelector('i').className = 'bx bx-volume-full';
+        soundToggleBtn.setAttribute('aria-label', 'Desativar Áudio');
+      } else {
+        aboutVideo.muted = true;
+        soundToggleBtn.querySelector('i').className = 'bx bx-volume-mute';
+        soundToggleBtn.setAttribute('aria-label', 'Ativar Áudio');
+      }
+    });
+  }
 });
