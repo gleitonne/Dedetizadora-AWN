@@ -1,4 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Theme Toggle (Dark / Light Mode)
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const currentTheme = localStorage.getItem('theme');
+
+  if (currentTheme === 'dark-theme') {
+    document.body.classList.add('dark-theme');
+    if (themeToggleBtn) {
+      const icon = themeToggleBtn.querySelector('i');
+      if (icon) icon.className = 'bx bx-sun';
+    }
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      const icon = themeToggleBtn.querySelector('i');
+      
+      let theme = 'light-theme';
+      if (document.body.classList.contains('dark-theme')) {
+        theme = 'dark-theme';
+        if (icon) icon.className = 'bx bx-sun';
+      } else {
+        if (icon) icon.className = 'bx bx-moon';
+      }
+      localStorage.setItem('theme', theme);
+    });
+  }
+
   // Mobile Menu Toggle
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');

@@ -1280,3 +1280,81 @@ textarea.form-control {
     flex-direction: column;
   }
 }
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-normal);
+  margin-right: 15px;
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(26, 32, 104, 0.05);
+  color: var(--color-highlight);
+}
+
+/* Dark Mode Variable Overrides */
+body.dark-theme {
+  --color-primary: #8F95F5;       /* Azul/Lilás claro */
+  --color-secondary: #B4B7F8;
+  --color-white: #0E121E;         /* Fundo escuro */
+  --color-bg-light: #161D30;      /* Fundo do card/seção alternada */
+  --color-text-dark: #F1F5F9;     /* Texto claro */
+  --color-text-muted: #94A3B8;    /* Texto muted */
+  --color-border: #1E293B;        /* Borda escura */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .header {
+  background-color: rgba(14, 18, 30, 0.95);
+}
+
+body.dark-theme .theme-toggle-btn {
+  color: #FFC107; /* Cor dourada para o sol no modo escuro */
+}
+
+body.dark-theme .theme-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .service-card,
+body.dark-theme .diff-card,
+body.dark-theme .timeline-content,
+body.dark-theme .testimonial-card,
+body.dark-theme .faq-item,
+body.dark-theme .contact-form-box,
+body.dark-theme .hero-img-box {
+  border-color: var(--color-border);
+}
+
+body.dark-theme .form-control {
+  border-color: var(--color-border);
+  background-color: #101625;
+  color: #F1F5F9;
+}
+
+body.dark-theme .form-control:focus {
+  border-color: var(--color-accent);
+  background-color: #0E121E;
+}
+
+body.dark-theme .nav-link {
+  color: #F1F5F9;
+}
+
+body.dark-theme .logo-img {
+  filter: brightness(0) invert(1); /* Deixa a logo legível se for branca ou ajusta se necessário */
+}
+
