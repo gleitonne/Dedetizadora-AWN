@@ -118,4 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, observerOptions);
+  animateElements.forEach(el => {
+    observer.observe(el);
+  });
 });
